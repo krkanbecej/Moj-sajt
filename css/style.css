@@ -69,7 +69,7 @@ h4:before {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 24px;
 }
 
@@ -92,7 +92,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #fff;
+    background-color: rgb(233, 227, 227);
     z-index: 10000
 }
 
@@ -447,9 +447,29 @@ a.active {
 
 /* projects section
 ==================================================*/
-
+ol.type li {
+	display: inline-block;
+	padding: 20px 0;
+}
+ol.type li a {
+	color: #999;
+	font-weight: 600;
+	padding: 4px 24px;
+	background: #eee;
+	border: 0;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+ol.type li a.active {
+	color: #fff;
+	background-color: #425BB5;
+}
+ol.type li a:hover {
+	color: #fff;
+	background-color: #9395b3;
+}
 #projects {
-    padding: 100px 0;
+    
 }
 
 .portfolio .categories-grid span {
@@ -593,40 +613,37 @@ a.active {
     padding-top: 55px;
 }
 
-.modal-content {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
-    border: none;
+.hover-bg .hover-text {
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.6);
+	padding: 30% 0 0 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: all 0.5s;
 }
-
-.popup-modal {
-    background: #fff;
+.hover-bg .hover-text>h4 {
+	opacity: 0;
+	color: #fff;
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+	transition: all 0.3s;
+	font-size: 17px;
+	letter-spacing: 0.5px;
+	font-weight: 500;
 }
-
-.close-popup-modal {
-    float: right;
-    margin: 20px;
-    font-size: 22px;
-    opacity: 0;
-    cursor: pointer;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-    -webkit-transition-delay: .6s;
-    transition-delay: .6s;
-    position: fixed;
-    z-index: 100000;
-    right: 14px;
+.hover-bg:hover .hover-text>h4 {
+	opacity: 1;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
 }
-
-.animatedModal-on .close-popup-modal {
-    opacity: 1;
+.hover-bg:hover .hover-text {
+	opacity: 1;
 }
-
-.modal-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 40px;
-    line-height: 50px;
-}
-
 
 /* contact
 ==================================================*/
