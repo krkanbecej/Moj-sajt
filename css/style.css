@@ -300,11 +300,7 @@ a.active {
 
 /* about section
 ==================================================*/
-
-#about {
-    padding: 100px 0;
-}
-
+ 
 .about-img-div img {
     margin: 0 auto;
 }
@@ -318,7 +314,6 @@ a.active {
     left: 50px;
     z-index: 1
 }
-
 
 /* experience section
 ==================================================*/
@@ -452,10 +447,9 @@ ol.type li {
 	padding: 20px 0;
 }
 ol.type li a {
-	color: #999;
+	color: #333;
 	font-weight: 600;
 	padding: 4px 24px;
-	background: #eee;
 	border: 0;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
@@ -467,9 +461,6 @@ ol.type li a.active {
 ol.type li a:hover {
 	color: #fff;
 	background-color: #9395b3;
-}
-#projects {
-    
 }
 
 .portfolio .categories-grid span {
@@ -513,6 +504,7 @@ ol.type li a:hover {
     overflow: hidden;
     display: block;
     margin-bottom: 30px;
+    
 }
 
 .portfolio_item .portfolio_item_hover {
@@ -567,7 +559,7 @@ ol.type li a:hover {
     opacity: 0;
     font-size: 10px;
     letter-spacing: 2px;
-}
+    }
 
 .portfolio_item:hover .portfolio_item_hover {
     opacity: 1;
@@ -612,18 +604,37 @@ ol.type li a:hover {
     padding-bottom: 0 !important;
     padding-top: 55px;
 }
+.portfolio-item {
+	margin: 15px 0;
+}
+.portfolio-item .hover-bg {
+	overflow: hidden;
+	position: relative;
+}
+.portfolio-item .hover-bg:before {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	bottom: 6px;
+	left: 6px;
+	border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
 
 .hover-bg .hover-text {
 	position: absolute;
 	text-align: center;
 	margin: 0 auto;
 	color: #fff;
-	background: rgba(0, 0, 0, 0.6);
+	background: #425BB5;
 	padding: 30% 0 0 0;
 	height: 100%;
 	width: 100%;
 	opacity: 0;
-	transition: all 0.5s;
+    transition: all 0.5s;
+    font-weight: 500;
 }
 .hover-bg .hover-text>h4 {
 	opacity: 0;
